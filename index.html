@@ -14,7 +14,7 @@ function SubForm (){
         data:$("#myForm").serializeArray(),
         success: function(){
           alert("Grazie per l'ordine, BONASE!")
-	"window.location.href=window.location.href"
+	  location.reload();
         },
         error: function(){
           alert("Oh-oh qualcosa è andato storto vai da Vincenzo a riportare l'errore :(")
