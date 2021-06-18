@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
+<header>
+ <h1><img src="nta_logo.png" class="responsive2"></h1>
+</header>
    <head>
+   <link rel="stylesheet" href="mystyle.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Nta Bar</title>
       <script src="https://code.jquery.com/jquery-3.6.0.js" 
@@ -9,7 +13,7 @@
       <script>
          function SubForm (){
              $.ajax({
-                 url:'https://api.apispreadsheets.com/data/14216/',
+                 url:'https://api.apispreadsheets.com/data/14323/',
                  type:'post',
                  data:$("#myForm").serializeArray(),
                  success: function(){
@@ -22,13 +26,21 @@
              });
          }
       </script>
-   </head>
+
+
+
+
+
+
+
+  </head>
    <body>
       <form id="myForm">
          <label>Chi sei?</label>
          <br/>
          <input name="Nome" />
          <br/>
+		 <br/>
          <label>Cosa prendiamo oggi?</label>
          <br/>
          <input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Caffe'<br/>
@@ -46,19 +58,18 @@
 	 <br/>
          <label>Preferenze?</label>
          <br/>
-         <textarea name="Preferenze">
-         </textarea>
+         <input name="Preferenze">
          <br/>
          <br/>
       </form>
-      <button onclick="SubForm()">Ordina!</button>
+      <button class="button" onclick="SubForm()">Ordina!</button>
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjNpvYiL5gQgN41vvCZEyRwTcWOfu4lK-i6DwVutktjY3VY1ol4wvYbetrpfDOie40WBn3lqD7rysM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800" height="800"></iframe>
+      <iframe src="https://docs.google.com/spreadsheets/d/1iNaNFbqKAIlN_Lanp8KsLphJBwp6z_NuEkCXLg7b_B4/htmlembed/sheet?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800" height="1000" class="responsive"></iframe>
       <br/>
    </body>
 </html>
+
+
+
+
