@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nta Bar</title>
-<script src="https://code.jquery.com/jquery-3.6.0.js" 
-integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
-crossorigin="anonymous"></script>
-<script>
-function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/14216/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Grazie per l'ordine, BONASE!")
-	  location.reload();
-        },
-        error: function(){
-          alert("Oh-oh qualcosa è andato storto vai da Vincenzo a riportare l'errore :(")
-        }
-    });
-}
-</script>
-</head>
-<body>
-  <form id="myForm">
-    <label>Chi sei?</label>
-    <br/>
-    <input name="Nome" />
-    <br/>
-    <label>Cosa prendiamo oggi?</label>
-    <br/>
-    <input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Caffe'<br/>
-    <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Ginseng<br/>
-	<input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Caffe' Schiumato<br/>
-    <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Cornetto<br/>
-	<input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Pizzetta<br/>
-    <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Parigina<br/>
-    <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Altro<br/>
-    <br/>
-	<label>Quantità</label>
-    <br/>
-    <input name="Quantità" />
-    <br/>
-    <label>Preferenze?</label>
-    <br/>
-    <textarea name="Preferenze">
-    </textarea>
-    <br/>
-    <br/>
-  </form>
-  <button onclick="SubForm()">Ordina!</button>
-    <br/>
-    <br/>
-	<br/>
-    <br/>
-	<br/>
-    <br/>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjNpvYiL5gQgN41vvCZEyRwTcWOfu4lK-i6DwVutktjY3VY1ol4wvYbetrpfDOie40WBn3lqD7rysM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800" height="800"></iframe>
-    <br/>
-</body>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nta Bar</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" 
+         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+         crossorigin="anonymous"></script>
+      <script>
+         function SubForm (){
+             $.ajax({
+                 url:'https://api.apispreadsheets.com/data/14216/',
+                 type:'post',
+                 data:$("#myForm").serializeArray(),
+                 success: function(){
+                   alert("Grazie per l'ordine, BONASE!")
+         	  location.reload();
+                 },
+                 error: function(){
+                   alert("Oh-oh qualcosa è andato storto vai da Vincenzo a riportare l'errore :(")
+                 }
+             });
+         }
+      </script>
+   </head>
+   <body>
+      <form id="myForm">
+         <label>Chi sei?</label>
+         <br/>
+         <input name="Nome" />
+         <br/>
+         <label>Cosa prendiamo oggi?</label>
+         <br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Caffe'<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Ginseng<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Caffe' Schiumato<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Cornetto<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Caffè" /> Pizzetta<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Parigina<br/>
+         <input type="radio" id="Ordine" name="Ordine" value="Ginseng" /> Altro<br/>
+         <br/>
+         <label>Quantità</label>
+         <br/>
+         <input name="Quantità" />
+         <br/>
+	 <br/>
+         <label>Preferenze?</label>
+         <br/>
+         <textarea name="Preferenze">
+         </textarea>
+         <br/>
+         <br/>
+      </form>
+      <button onclick="SubForm()">Ordina!</button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjNpvYiL5gQgN41vvCZEyRwTcWOfu4lK-i6DwVutktjY3VY1ol4wvYbetrpfDOie40WBn3lqD7rysM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800" height="800"></iframe>
+      <br/>
+   </body>
 </html>
